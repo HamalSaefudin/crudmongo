@@ -11,5 +11,5 @@ $id = $_GET['id'];
 $db->tanggota->deleteOne(array('_id' => new MongoId($id)));
  
 //redirecting to the display page (index.php in our case)
-("Location:index.php");
+header("location:index.php");
 ?>                                                                                                                                                                                                    

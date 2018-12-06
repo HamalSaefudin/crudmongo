@@ -50,76 +50,69 @@ $phone = $result['phone'];
 $alamat = $result['alamat'];
 ?>
 <html>
-<head>
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
+<head>    
+   <title>
     Web Library
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
 </head>
  
-<body>
-    <a href="index.php">Home</a>
-    <br/><br/>
-    <div class="content">
+<body class="">
+      <div class="content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-info">
-                  <h4 class="card-title">Create User</h4>
+                  <h4 class="card-title">Update</h4>
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body">
                   <form act method="post">
-                    <tr>
                     <div class="row">
                       <div class="col-md-7">
                         <div class="form-group">
-                          <td><label class="bmd-label-floating">Nama</label></td>
-                          <td><input type="text" name="nama" value="<?php echo $nama;?>"></td>
+                          <label class="bmd-label-floating">Nama</label>
+                          <input type="text" class="form-control" name="nama">
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-7">
                         <div class="form-group">
-                          <td><label class="bmd-label-floating">Email</label></td>
-                          <td><input type="email" name="email" value="<?php echo $email;?>"></td>
+                          <label class="bmd-label-floating">Email</label>
+                          <input type="email" class="form-control" name="email">
                         </div>
                       </div>
-                      </div>
-                      <div class="row">
-                      <div class="col-md-7">
+                      <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Phone</label>
-                          <input type="text" name="phone" value="<?php echo $phone;?>">
+                          <input type="tel"pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}"
+       required class="form-control" name="phone">
                         </div>
                       </div>
-                      </div>
+                    </div>
                     <div class="row">
-                      <div class="col-md-7">
+                      <div class="col-md-10">
                         <div class="form-group">
                           <label class="bmd-label-floating">Alamat</label>
-                          <input type="text" name="alamat" value="<?php echo $alamat;?>">
+                          <input type="text" class="form-control" name="alamat">
                         </div>
                       </div>
-                      </div>
-                      </tr>
-                      <td><input type="hidden" name="id" value="<?php echo $_GET['id'];?>"></td>
-                    <input type="submit" class="btn btn-info pull-right" name="update" value="Update">
+                    </div>
+                    <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
+                        <input class="contact100-form-btn" type="submit" name="update" value="Update"></input>
+                    <div class="clearfix"></div>
                   </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        </div>
+      </div>
+      </div>
+    </div>
 </body>
 </html>
