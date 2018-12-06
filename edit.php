@@ -50,12 +50,12 @@ $phone = $result['phone'];
 $alamat = $result['alamat'];
 ?>
 <html>
-<head>    
+<head>
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    E
+    Web Library
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -63,47 +63,63 @@ $alamat = $result['alamat'];
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="assets/demo/demo.css" rel="stylesheet" />
 </head>
  
 <body>
     <a href="index.php">Home</a>
     <br/><br/>
-    
-    <form name="form1" method="post" action="edit.php">
+    <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
               <div class="card">
-        <table border="0">
-            <tr> 
-                <td>Nis</td>
-                <td><input type="text" name="nis" value="<?php echo $nis;?>"></td>
-            </tr>
-            <tr> 
-                <td>Nama</td>
-                <td><input type="text" name="name" value="<?php echo $nama;?>"></td>
-            </tr>
-            <tr> 
-                <td>Kelas</td>
-                <td><input type="text" name="class" value="<?php echo $kelas;?>"></td>
-            </tr>
-            <tr> 
-                <td>PK3</td>
-                <td><input type="text" name="pk3" value="<?php echo $pk3;?>"></td>
-            </tr>
-            <tr> 
-                <td>PK5</td>
-                <td><input type="text" name="pk5" value="<?php echo $pk5;?>"></td>
-            </tr>
-            <tr> 
-                <td>PK8</td>
-                <td><input type="text" name="pk8" value="<?php echo $pk8;?>"></td>
-            </tr>
-            <tr>
-                <td><input type="hidden" name="id" value="<?php echo $_GET['id'];?>"></td>
-                <td><input type="submit" name="update" value="Update"></td>
-            </tr>
-        </table>
-    </div>
-    </form>
+                <div class="card-header card-header-info">
+                  <h4 class="card-title">Create User</h4>
+                  <p class="card-category">Complete your profile</p>
+                </div>
+                <div class="card-body">
+                  <form act method="post">
+                    <tr>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="form-group">
+                          <td><label class="bmd-label-floating">Nama</label></td>
+                          <td><input type="text" name="nama" value="<?php echo $nama;?>"></td>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="form-group">
+                          <td><label class="bmd-label-floating">Email</label></td>
+                          <td><input type="email" name="email" value="<?php echo $email;?>"></td>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-md-7">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Phone</label>
+                          <input type="text" name="phone" value="<?php echo $phone;?>">
+                        </div>
+                      </div>
+                      </div>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Alamat</label>
+                          <input type="text" name="alamat" value="<?php echo $alamat;?>">
+                        </div>
+                      </div>
+                      </div>
+                      </tr>
+                      <td><input type="hidden" name="id" value="<?php echo $_GET['id'];?>"></td>
+                    <input type="submit" class="btn btn-info pull-right" name="update" value="Update">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 </body>
 </html>
